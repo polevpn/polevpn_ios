@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1634D0D12936EF1400209FCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1634D0D02936EF1400209FCA /* AppDelegate.swift */; };
+		1634D0D32936EF1400209FCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1634D0D22936EF1400209FCA /* SceneDelegate.swift */; };
+		1634D0D52936EF1400209FCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1634D0D42936EF1400209FCA /* ViewController.swift */; };
+		1634D0D82936EF1400209FCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1634D0D62936EF1400209FCA /* Main.storyboard */; };
+		1634D0DA2936EF1500209FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1634D0D92936EF1500209FCA /* Assets.xcassets */; };
+		1634D0DD2936EF1500209FCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1634D0DB2936EF1500209FCA /* LaunchScreen.storyboard */; };
+		1634D0F82936EF7400209FCA /* Polevpnmobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1634D0F72936EF7400209FCA /* Polevpnmobile.xcframework */; };
+		1634D1292936F2F700209FCA /* static in Resources */ = {isa = PBXBuildFile; fileRef = 1634D1282936F2F700209FCA /* static */; };
+		9D26BE60258C67740D756A4D /* Pods_PoleVPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D7C8301079573FBE05D411 /* Pods_PoleVPN.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1634D0CD2936EF1400209FCA /* PoleVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoleVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1634D0D02936EF1400209FCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1634D0D22936EF1400209FCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1634D0D42936EF1400209FCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1634D0D72936EF1400209FCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1634D0D92936EF1500209FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1634D0DC2936EF1500209FCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1634D0DE2936EF1500209FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1634D0F72936EF7400209FCA /* Polevpnmobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Polevpnmobile.xcframework; sourceTree = "<group>"; };
+		1634D1282936F2F700209FCA /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; path = static; sourceTree = "<group>"; };
+		4CAAC604303B666E67FFB5F4 /* Pods-PoleVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoleVPN.debug.xcconfig"; path = "Target Support Files/Pods-PoleVPN/Pods-PoleVPN.debug.xcconfig"; sourceTree = "<group>"; };
+		93D7C8301079573FBE05D411 /* Pods_PoleVPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoleVPN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A18537F485722ADBB702FF /* Pods-PoleVPN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoleVPN.release.xcconfig"; path = "Target Support Files/Pods-PoleVPN/Pods-PoleVPN.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1634D0CA2936EF1400209FCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1634D0F82936EF7400209FCA /* Polevpnmobile.xcframework in Frameworks */,
+				9D26BE60258C67740D756A4D /* Pods_PoleVPN.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		059DD73C4BC20DD99B6CB0A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CAAC604303B666E67FFB5F4 /* Pods-PoleVPN.debug.xcconfig */,
+				B8A18537F485722ADBB702FF /* Pods-PoleVPN.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1634D0C42936EF1400209FCA = {
+			isa = PBXGroup;
+			children = (
+				1634D0CF2936EF1400209FCA /* PoleVPN */,
+				1634D0CE2936EF1400209FCA /* Products */,
+				059DD73C4BC20DD99B6CB0A3 /* Pods */,
+				183CA562E85A85272CD179C1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1634D0CE2936EF1400209FCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1634D0CD2936EF1400209FCA /* PoleVPN.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1634D0CF2936EF1400209FCA /* PoleVPN */ = {
+			isa = PBXGroup;
+			children = (
+				1634D1282936F2F700209FCA /* static */,
+				1634D0F72936EF7400209FCA /* Polevpnmobile.xcframework */,
+				1634D0D02936EF1400209FCA /* AppDelegate.swift */,
+				1634D0D22936EF1400209FCA /* SceneDelegate.swift */,
+				1634D0D42936EF1400209FCA /* ViewController.swift */,
+				1634D0D62936EF1400209FCA /* Main.storyboard */,
+				1634D0D92936EF1500209FCA /* Assets.xcassets */,
+				1634D0DB2936EF1500209FCA /* LaunchScreen.storyboard */,
+				1634D0DE2936EF1500209FCA /* Info.plist */,
+			);
+			path = PoleVPN;
+			sourceTree = "<group>";
+		};
+		183CA562E85A85272CD179C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93D7C8301079573FBE05D411 /* Pods_PoleVPN.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1634D0CC2936EF1400209FCA /* PoleVPN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1634D0E12936EF1500209FCA /* Build configuration list for PBXNativeTarget "PoleVPN" */;
+			buildPhases = (
+				92DA4F757D74BDDBC93DEDA7 /* [CP] Check Pods Manifest.lock */,
+				1634D0C92936EF1400209FCA /* Sources */,
+				1634D0CA2936EF1400209FCA /* Frameworks */,
+				1634D0CB2936EF1400209FCA /* Resources */,
+				CDCCE10F1843B73D0D2F3550 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoleVPN;
+			productName = PoleVPN;
+			productReference = 1634D0CD2936EF1400209FCA /* PoleVPN.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1634D0C52936EF1400209FCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					1634D0CC2936EF1400209FCA = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 1634D0C82936EF1400209FCA /* Build configuration list for PBXProject "PoleVPN" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1634D0C42936EF1400209FCA;
+			productRefGroup = 1634D0CE2936EF1400209FCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1634D0CC2936EF1400209FCA /* PoleVPN */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1634D0CB2936EF1400209FCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1634D0DD2936EF1500209FCA /* LaunchScreen.storyboard in Resources */,
+				1634D0DA2936EF1500209FCA /* Assets.xcassets in Resources */,
+				1634D1292936F2F700209FCA /* static in Resources */,
+				1634D0D82936EF1400209FCA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92DA4F757D74BDDBC93DEDA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoleVPN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDCCE10F1843B73D0D2F3550 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PoleVPN/Pods-PoleVPN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PoleVPN/Pods-PoleVPN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoleVPN/Pods-PoleVPN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1634D0C92936EF1400209FCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1634D0D52936EF1400209FCA /* ViewController.swift in Sources */,
+				1634D0D12936EF1400209FCA /* AppDelegate.swift in Sources */,
+				1634D0D32936EF1400209FCA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1634D0D62936EF1400209FCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1634D0D72936EF1400209FCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1634D0DB2936EF1500209FCA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1634D0DC2936EF1500209FCA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1634D0DF2936EF1500209FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1634D0E02936EF1500209FCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1634D0E22936EF1500209FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CAAC604303B666E67FFB5F4 /* Pods-PoleVPN.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 592RAH7L68;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PoleVPN/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polevpn.PoleVPN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1634D0E32936EF1500209FCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8A18537F485722ADBB702FF /* Pods-PoleVPN.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 592RAH7L68;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PoleVPN/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polevpn.PoleVPN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1634D0C82936EF1400209FCA /* Build configuration list for PBXProject "PoleVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1634D0DF2936EF1500209FCA /* Debug */,
+				1634D0E02936EF1500209FCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1634D0E12936EF1500209FCA /* Build configuration list for PBXNativeTarget "PoleVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1634D0E22936EF1500209FCA /* Debug */,
+				1634D0E32936EF1500209FCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1634D0C52936EF1400209FCA /* Project object */;
+}
