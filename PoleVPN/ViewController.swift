@@ -345,6 +345,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
                     
                     self.loadProviderManager{ (manager) in
                         
+                        self.observerAdded = false
+                        
                         guard manager != nil  else { return }
                         
                         do{
