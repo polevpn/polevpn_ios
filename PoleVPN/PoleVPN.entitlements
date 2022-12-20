@@ -8,7 +8,7 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.matrixnetworking.polevpn</string>
+		<string>group.com.polevpn.ios</string>
 	</array>
 </dict>
 </plist>
