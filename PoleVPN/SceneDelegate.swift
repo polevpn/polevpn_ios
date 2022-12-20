@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  PoleVPN
 //
-//  Created by starjiang on 30/11/22.
+//  Created by polevpn on 30/11/22.
 //
 
 import UIKit
