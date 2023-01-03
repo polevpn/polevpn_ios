@@ -9,6 +9,32 @@
 import NetworkExtension
 import Polevpnmobile
 import SwiftyJSON
+import CommonCrypto
+
+public extension String {
+    /* ################################################################## */
+    /**
+     - returns: the String, as an MD5 hash.
+     */
+    var md5: String {
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CUnsignedInt(self.lengthOfBytes(using: String.Encoding.utf8))
+        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
+        CC_MD5(str!, strLen, result)
+
+        let hash = NSMutableString()
+
+        for i in 0..<digestLen {
+            hash.appendFormat("%02x", result[i])
+        }
+
+        result.deallocate()
+        return hash as String
+    }
+}
+
+
 
 class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHandlerProtocol {
 
@@ -80,9 +106,10 @@ class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHan
     
     func onErrorEvent(_ errtype: String?, errmsg: String?) {
         PolevpnmobileLog("error","vpn error,"+errmsg!)
-        self.pendingCompletionStart!(NSError(domain: errmsg!, code: 1000))
         sharedData.setValue(errmsg, forKey: "error")
         sharedData.synchronize()
+        self.flushData()
+        self.pendingCompletionStart!(NSError(domain: errmsg!, code: 1000))
     }
     
     
@@ -112,7 +139,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHan
     
     override init() {
         super.init()
-        self.sharedData = UserDefaults(suiteName: "group.com.matrixnetworking.polevpn")
+        self.sharedData = UserDefaults(suiteName: "group.com.polevpn.ios")
         self.polevpn = PolevpnmobilePoleVPN()
         self.polevpn.setEventHandler(self)
         
@@ -172,7 +199,9 @@ class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHan
             }
         }
         
-        self.polevpn.start(endpoint, user: user,pwd: pwd,sni: sni,skipSSLVerify: skipSSLVerify)
+        let deviceId = UIDevice.current.identifierForVendor?.uuidString
+                
+        self.polevpn.start(endpoint, user: user,pwd: pwd,sni: sni,skipSSLVerify: skipSSLVerify,deviceType: "Ios",deviceId: deviceId?.md5)
     }
     
     

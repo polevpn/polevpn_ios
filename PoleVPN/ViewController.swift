@@ -31,7 +31,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         PolevpnmobileInitDB(documentPath+"/config.db",&err)
         PolevpnmobileSetLogPath(documentPath)
         
-        sharedData = UserDefaults(suiteName: "group.com.matrixnetworking.polevpn")
+        sharedData = UserDefaults(suiteName: "group.com.polevpn.ios")
         
     }
     
@@ -79,7 +79,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         }else if name == "GetAllLogs" {
             
             
-            let logs = sharedData.string(forKey: "logs")
+            var logs = sharedData.string(forKey: "logs")
+            
+            if logs  == nil {
+                logs = ""
+            }
 
             var msg = JSON()
             msg["event"] = "logs"
@@ -242,7 +246,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         
         let proto = NETunnelProviderProtocol()
         
-        proto.providerBundleIdentifier = "com.matrixnetworking.polevpn.PacketTunnelProvider"
+        proto.providerBundleIdentifier = "com.polevpn.ios.PacketTunnelProvider"
  
         proto.serverAddress = "PoleVPNServer"
         

@@ -13,12 +13,12 @@
 		1634D0DA2936EF1500209FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1634D0D92936EF1500209FCA /* Assets.xcassets */; };
 		1634D0DD2936EF1500209FCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1634D0DB2936EF1500209FCA /* LaunchScreen.storyboard */; };
 		1634D1292936F2F700209FCA /* static in Resources */ = {isa = PBXBuildFile; fileRef = 1634D1282936F2F700209FCA /* static */; };
+		16535E43295F2B3D009C6699 /* Polevpnmobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16535E42295F2B3D009C6699 /* Polevpnmobile.xcframework */; };
 		1681109229375D0300F8691E /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1681109129375D0300F8691E /* NetworkExtension.framework */; };
 		1681109529375D0300F8691E /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681109429375D0300F8691E /* PacketTunnelProvider.swift */; };
 		1681109A29375D0300F8691E /* PacketTunnelProvider.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1681109029375D0300F8691E /* PacketTunnelProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		168110A02938385C00F8691E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681109F2938385C00F8691E /* SceneDelegate.swift */; };
 		168110A82938AEA900F8691E /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1681109429375D0300F8691E /* PacketTunnelProvider.swift */; };
-		168110AA2939D53500F8691E /* Polevpnmobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168110A92939D53500F8691E /* Polevpnmobile.xcframework */; };
 		9D26BE60258C67740D756A4D /* Pods_PoleVPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D7C8301079573FBE05D411 /* Pods_PoleVPN.framework */; };
 		E5E35F4DFC6CFE8EDBB0F615 /* Pods_PacketTunnelProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3DBEDC2E7C7321A3258725 /* Pods_PacketTunnelProvider.framework */; };
 /* End PBXBuildFile section */
@@ -56,13 +56,13 @@
 		1634D0DC2936EF1500209FCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1634D0DE2936EF1500209FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1634D1282936F2F700209FCA /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; path = static; sourceTree = "<group>"; };
+		16535E42295F2B3D009C6699 /* Polevpnmobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Polevpnmobile.xcframework; sourceTree = "<group>"; };
 		1681109029375D0300F8691E /* PacketTunnelProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnelProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1681109129375D0300F8691E /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		1681109429375D0300F8691E /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		1681109629375D0300F8691E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1681109729375D0300F8691E /* PacketTunnelProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnelProvider.entitlements; sourceTree = "<group>"; };
 		1681109F2938385C00F8691E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		168110A92939D53500F8691E /* Polevpnmobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Polevpnmobile.xcframework; sourceTree = "<group>"; };
 		17BF0E90E110D16DA2C2DA3D /* Pods-PacketTunnelProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnelProvider.debug.xcconfig"; path = "Target Support Files/Pods-PacketTunnelProvider/Pods-PacketTunnelProvider.debug.xcconfig"; sourceTree = "<group>"; };
 		3742B406E4B8D8621656602C /* Pods-PacketTunnelProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnelProvider.release.xcconfig"; path = "Target Support Files/Pods-PacketTunnelProvider/Pods-PacketTunnelProvider.release.xcconfig"; sourceTree = "<group>"; };
 		4CAAC604303B666E67FFB5F4 /* Pods-PoleVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoleVPN.debug.xcconfig"; path = "Target Support Files/Pods-PoleVPN/Pods-PoleVPN.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				168110AA2939D53500F8691E /* Polevpnmobile.xcframework in Frameworks */,
+				16535E43295F2B3D009C6699 /* Polevpnmobile.xcframework in Frameworks */,
 				9D26BE60258C67740D756A4D /* Pods_PoleVPN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,7 +127,7 @@
 		1634D0CF2936EF1400209FCA /* PoleVPN */ = {
 			isa = PBXGroup;
 			children = (
-				168110A92939D53500F8691E /* Polevpnmobile.xcframework */,
+				16535E42295F2B3D009C6699 /* Polevpnmobile.xcframework */,
 				1634D1282936F2F700209FCA /* static */,
 				1681109F2938385C00F8691E /* SceneDelegate.swift */,
 				1634D0D02936EF1400209FCA /* AppDelegate.swift */,
@@ -501,6 +501,7 @@
 				DEVELOPMENT_TEAM = RX4TG78XK8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PoleVPN/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -533,6 +534,7 @@
 				DEVELOPMENT_TEAM = RX4TG78XK8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PoleVPN/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -571,7 +573,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.matrixnetworking.polevpn.PacketTunnelProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polevpn.ios.PacketTunnelProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -599,7 +601,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.matrixnetworking.polevpn.PacketTunnelProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polevpn.ios.PacketTunnelProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
