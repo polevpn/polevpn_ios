@@ -145,7 +145,7 @@
           <el-input v-model="this.$store.state.form.ProxyDomains" rows="6" wrap="off" type="textarea" placeholder="www.google.com(one item per line)"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button size="large" type="primary" plain @click="onSubmit">Save</el-button>
+          <el-button size="large" type="primary" plain @touchstart="onSubmit">Save</el-button>
           <el-button size="large" type="primary" plain @click="onDeleteClick" v-show="this.$store.state.showDelete" >Delete</el-button>
           <el-button size="large" @click="onReset">Reset</el-button>
 
