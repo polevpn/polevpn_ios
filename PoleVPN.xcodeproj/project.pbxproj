@@ -498,7 +498,7 @@
 				CODE_SIGN_ENTITLEMENTS = PoleVPN/PoleVPN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RX4TG78XK8;
+				DEVELOPMENT_TEAM = 7YX9YD737M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PoleVPN/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -512,12 +512,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.polevpn.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -531,7 +534,7 @@
 				CODE_SIGN_ENTITLEMENTS = PoleVPN/PoleVPN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RX4TG78XK8;
+				DEVELOPMENT_TEAM = 7YX9YD737M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PoleVPN/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -545,12 +548,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.polevpn.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -561,7 +567,7 @@
 				CODE_SIGN_ENTITLEMENTS = PacketTunnelProvider/PacketTunnelProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RX4TG78XK8;
+				DEVELOPMENT_TEAM = 7YX9YD737M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PacketTunnelProvider/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PacketTunnelProvider;
@@ -589,7 +595,7 @@
 				CODE_SIGN_ENTITLEMENTS = PacketTunnelProvider/PacketTunnelProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RX4TG78XK8;
+				DEVELOPMENT_TEAM = 7YX9YD737M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PacketTunnelProvider/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PacketTunnelProvider;
