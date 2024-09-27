@@ -59,7 +59,6 @@ class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHan
     }
     
     func onStartedEvent() {
-        
         PolevpnmobileLog("info","vpn started")
     }
 
@@ -173,7 +172,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHan
         let pwd = options!["pwd"] as! String
         let sni = options!["sni"] as! String
         let skipSSLVerify = options!["skipSSLVerify"] as! Bool
-        self.useRemoteRouteRules = options!["useRemoteRouteRules"] as! Bool
+        self.useRemoteRouteRules = options!["useRemoteRouteRules"] as? Bool
         
         let localRouteRules = options!["localRouteRules"] as! String
         let proxyDomains = options!["proxyDomains"] as! String
@@ -200,7 +199,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHan
         }
         
         let deviceId = UIDevice.current.identifierForVendor?.uuidString
-                
+                        
         self.polevpn.start(endpoint, user: user,pwd: pwd,sni: sni,skipSSLVerify: skipSSLVerify,deviceType: "Ios",deviceId: deviceId?.md5)
     }
     
