@@ -151,7 +151,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
                 
                 if manager?.connection.status != .disconnected {
                     self.updateVPNStatus(manager!)
-                    self.addVPNStatusObserver()
                 }
             }
         }
@@ -316,70 +315,66 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
         }
     }
     
-    func startVPN(options:[String:NSObject]) {
-        
-        NETunnelProviderManager.loadAllFromPreferences { (managers,error) in
-            guard let managers = managers else{ return }
+    func delDupConfig(_ arrays:[NETunnelProviderManager]){
+            if (arrays.count)>1{
+                for i in 0 ..< arrays.count{
+                    arrays[i].removeFromPreferences(completionHandler: { (error) in
+                        if(error != nil){print(error.debugDescription)}
+                    })
+                }
+            }
+    }
+    
+    func loadAndCreatePrividerManager(_ complete: @escaping (NETunnelProviderManager?) -> Void ){
+        NETunnelProviderManager.loadAllFromPreferences{ (managers, error) in
+            guard let managers = managers else{return}
             let manager: NETunnelProviderManager
             if managers.count > 0 {
                 manager = managers[0]
-                
-                do{
-                    try manager.connection.startVPNTunnel(options:options)
-                }catch let err{
-                    print("start vpn fail",err)
-                    self.onErrorEvent("system", errmsg: err.localizedDescription)
-                    self.onStoppedEvent()
-                    return
-                }
-                
-                self.addVPNStatusObserver()
-
-                
+                self.delDupConfig(managers)
             }else{
                 manager = self.makeManager()
-                manager.saveToPreferences{ (error) in
-                    
-                    if error != nil {
-                        print("save vpn fail,",error!)
-                        self.onErrorEvent("system", errmsg: error?.localizedDescription)
-                        self.onStoppedEvent()
-                        return
+            }
+            
+            manager.isEnabled = true
+
+            manager.saveToPreferences{
+                if $0 != nil{complete(nil);return;}
+                manager.loadFromPreferences{
+                    if $0 != nil{
+                        complete(nil);return;
                     }
+                    self.addVPNStatusObserver()
                     
-                    self.loadProviderManager{ (manager) in
-                        
-                        self.observerAdded = false
-                        
-                        guard manager != nil  else { return }
-                        
-                        do{
-                            try manager!.connection.startVPNTunnel(options:options)
-                        }catch let err{
-                            self.onErrorEvent("system", errmsg: err.localizedDescription)
-                            self.onStoppedEvent()
-                            return
-                        }
-                        self.addVPNStatusObserver()
-                    }
+                    complete(manager)
                 }
+            }
+        }
+    }
+    
+    func startVPN(options:[String:NSObject]) {
+        
+        self.loadAndCreatePrividerManager{ (manager) in
+            
+            guard manager != nil  else { return }
+            
+            do{
+                try manager!.connection.startVPNTunnel(options:options)
+            }catch let err{
+                self.onErrorEvent("system", errmsg: err.localizedDescription)
+                self.onStoppedEvent()
+                return
             }
         }
     }
 
     func stopVPN() {
         
-        NETunnelProviderManager.loadAllFromPreferences { (managers,error) in
-            guard let managers = managers else{ return }
-
-            if managers.count < 1 {
-                return
-            }
-            managers[0].connection.stopVPNTunnel()
-            
+        self.loadProviderManager { (manager) in
+            guard manager != nil  else { return }
+            manager!.connection.stopVPNTunnel()
         }
     }
-
 }
 
 
