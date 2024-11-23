@@ -10,6 +10,8 @@ import NetworkExtension
 import Polevpnmobile
 import SwiftyJSON
 import CommonCrypto
+import os.log
+
 
 public extension String {
     /* ################################################################## */
@@ -34,11 +36,45 @@ public extension String {
     }
 }
 
+struct ApplicationMemoryCurrentUsage{
+    
+    var usage : Double = 0.0
+    var total : Double = 0.0
+    var ratio : Double = 0.0
+    
+}
 
+func report_memory()->ApplicationMemoryCurrentUsage {
+    var info = mach_task_basic_info()
+    var count = mach_msg_type_number_t(MemoryLayout<mach_task_basic_info>.size)/4
+    
+    let kerr: kern_return_t = withUnsafeMutablePointer(to: &info) {
+        $0.withMemoryRebound(to: integer_t.self, capacity: 1) {
+            task_info(mach_task_self_,
+                      task_flavor_t(MACH_TASK_BASIC_INFO),
+                      $0,
+                      &count)
+        }
+    }
+    
+    if kerr == KERN_SUCCESS {
+        
+        PolevpnmobileLog("info","Memory in use (in bytes): \(info.resident_size)")
+        let usage = info.resident_size / (1024 * 1024)
+        let total = ProcessInfo.processInfo.physicalMemory / (1024 * 1024)
+        let ratio = Double(info.virtual_size) / Double(ProcessInfo.processInfo.physicalMemory)
+        return ApplicationMemoryCurrentUsage(usage: Double(usage), total: Double(total), ratio: Double(ratio))
+    }
+    else {
+        print("Error with task_info(): " +
+              (String(cString: mach_error_string(kerr), encoding: String.Encoding.ascii) ?? "unknown error"))
+        return ApplicationMemoryCurrentUsage()
+    }
+}
 
-class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHandlerProtocol {
-
-
+class PacketTunnelProvider:NEPacketTunnelProvider,PolevpnmobilePoleVPNEventHandlerProtocol ,PolevpnmobilePoleVPNLogHandlerProtocol {
+    
+    private let log = OSLog(subsystem: "polevpn-tunnel", category: "default")
     private var polevpn: PolevpnmobilePoleVPN!
     private var pendingCompletionStart: ((Error?) -> Void)?
     private var pendingCompletionStop: (() -> Void)?
@@ -111,8 +147,13 @@ class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHan
         self.pendingCompletionStart!(NSError(domain: errmsg!, code: 1000))
     }
     
+    func onWrite(_ data: String?) {
+        os_log("%{public}s", log: log, type: .default, data!)
+    }
     
     @objc private func flushData() {
+        
+        report_memory()
         sharedData.setValue(polevpn.getUpBytes(), forKey: "upBytes")
         sharedData.setValue(polevpn.getDownBytes(), forKey: "downBytes")
         
@@ -139,12 +180,16 @@ class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHan
     override init() {
         super.init()
         self.sharedData = UserDefaults(suiteName: "group.com.polevpn.ios")
+        PolevpnmobileSetLogHandler(self)
+        
         self.polevpn = PolevpnmobilePoleVPN()
         self.polevpn.setEventHandler(self)
+
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentPath = paths[0]
         PolevpnmobileSetLogPath(documentPath)
+        PolevpnmobileSetLogLevel("INFO")
         
         self.timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.global())
         self.timer.schedule(deadline: DispatchTime.now()+10, repeating: .seconds(10), leeway: .nanoseconds(1))
@@ -238,7 +283,6 @@ class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHan
             outputRules.append(item.destinationAddress+":"+item.destinationSubnetMask)
         }
         
-        
         PolevpnmobileLog("info","set route "+JSON(outputRules).rawString([:])!)
         
         ipv4Settings.includedRoutes = routeRules
@@ -248,7 +292,9 @@ class PacketTunnelProvider: NEPacketTunnelProvider, PolevpnmobilePoleVPNEventHan
         ]
         settings.ipv4Settings = ipv4Settings
         settings.mtu = 1500
+        
 
+        
         return settings
    }
 

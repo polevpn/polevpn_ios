@@ -152,6 +152,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHan
                 if manager?.connection.status != .disconnected {
                     self.updateVPNStatus(manager!)
                 }
+                self.addVPNStatusObserver()
             }
         }
     }
